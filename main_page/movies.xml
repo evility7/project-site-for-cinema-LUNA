@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <banner>
+        <title>Горничная</title>
+        <genres>Триллер, Драма</genres>
+        <age>18+</age>
+        <rating>7.6</rating>
+        <description>
+            Роскошный особняк, молодая домработница — и скелеты в шкафах.
+            Хитовый триллер с Сидни Суини.
+        </description>
+        <duration>126 мин</duration>
+        <image>gornichnaya.jpg</image>
+        <trailer>A44QjkJeZFI</trailer>
+        <price>20.00</price>
+        <sessions>
+            <date value="28 Апр">
+                <time seats="1,1,0,0,0,1,1,1,0,0,1,0,1,0,0,1,1,1,0,1,0,1,0,0,1,0,0,0,0,0">18:20</time>
+                <time seats="0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,1,1,0,1,0,1,1,1,1,1,1,1,1,1">21:00</time>
+            </date>
+            <date value="29 Апр">
+                <time seats="0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">19:30</time>
+            </date>
+        </sessions>
+        <cast>
+            <person>
+                <name>Сидни Суини</name>
+                <role> Милли Кэллоуэй</role>
+                <photo>shalamet.jpg</photo>
+            </person>
+            <person>
+                <name>Аманда Сайфред</name>
+                <role> Нина Винчестер</role>
+                <photo>shalamet.jpg</photo>
+            </person>
+            <person>
+                <name>Брэндон Скленар</name>
+                <role>Эндрю Винчестер</role>
+                <photo>shalamet.jpg</photo>
+            </person>
+            <person>
+                <name>Пол Фиг</name>
+                <role>Режиссер</role>
+                <photo>shalamet.jpg</photo>
+            </person>
+        </cast>
+    </banner>
+
+    <movies>
+        <movie>
+            <age>18+</age>
+            <rating>8.2</rating>
+            <title>Дюна 2</title>
+            <meta>Фэнтези, драма, 166 мин</meta>
+            <poster>duna2.webp</poster>
+            <trailer>42RV2e1GyzM</trailer>
+            <price>18.00</price>
+            <sessions>
+                <date value="28 Апр">
+                    <time seats="0,0,1,1,0,0,1,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">14:30</time>
+                    <time seats="1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">19:00</time>
+                </date>
+                <date value="29 Апр">
+                    <time seats="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">12:00</time>
+                </date>
+            </sessions>
+            <description>Сможет ли герцог остановить грядущую войну? Тимоте Шаламе в эпическом сай-фай по роману Фрэнка Герберта </description>
+            <cast>
+                <person>
+                    <name>Тимати Шаламе</name>
+                    <role>Пол Атрейдес</role>
+                    <photo>shalamet.jpg</photo>
+                </person>
+                <person>
+                    <name>Зендея</name>
+                    <role>Чани</role>
+                    <photo>Zendaya.jpg</photo>
+                </person>
+                <person>
+                    <name>Ребекка Фергюсон</name>
+                    <role>Леди Джессика</role>
+                    <photo>rebeca.jpg</photo>
+                </person>
+                <person>
+                    <name>Хавьер Бардем</name>
+                    <role> Стилгар</role>
+                    <photo>Xavir.jpg</photo>
+                </person>
+                <person>
+                    <name>Остин Батлер</name>
+                    <role>Фейд-Раута Харконнен</role>
+                    <photo>Ostin.jpg</photo>
+                </person>
+            </cast>
+        </movie>
+
+        <movie>
+            <age>12+</age>
+            <rating>6.7</rating>
+            <title>Пираты Карибского моря: мертвецы не рассказвают сказки</title>
+            <meta>Комедия, приключения, 129 мин</meta>
+            <poster>pirates.jpg</poster>
+            <trailer>_AjPHQfuPus</trailer>
+            <price>15.00</price>
+            <sessions>
+                <date value="28 Апр">
+                    <time seats="0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">10:00</time>
+                    <time seats="0,1,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">16:00</time>
+                </date>
+            </sessions>
+            <description>Пираты охотятся за трезубцем Посейдона, чтобы спастись от проклятия. Финал приключенческой саги</description>
+            <cast>
+                <person>
+                    <name>Джонни Депп</name>
+                    <role>Капитан Джек Воробей</role>
+                    <photo>JoniDep.jpg</photo>
+                </person>
+                <person>
+                    <name>Хавьер Бардем</name>
+                    <role>Капитан Армандо Салазар</role>
+                    <photo>Xavir.jpg</photo>
+                </person>
+                <person>
+                    <name>Джеффри Раш</name>
+                    <role>Капитан Гектор Барбосса</role>
+                    <photo>Rash.jpg</photo>
+                </person>
+                <person>
+                    <name>Брентон Туэйтс</name>
+                    <role>Генри Тёрнер (сын Уилла Тёрнера)</role>
+                    <photo>Bren_Tytes.jpg</photo>
+                </person>                                                
+            </cast>
+        </movie>
+
+        <movie>
+            <age>6+</age>
+            <rating>7.9</rating>
+            <title>Звёздные войны: Скрытая угроза</title>
+            <meta>Фэнтези, 136 мин</meta>
+            <poster>starwars.jpg</poster>
+            <trailer>omuTFYiVqgA</trailer>
+            <price>14.00</price>
+            <sessions>
+                <date value="28 Апр">
+                    <time seats="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">11:00</time>
+                </date>
+            </sessions>
+            <description>Мальчику с далекой планеты суждено изменить судьбу галактики. Зрелищное, но недооцененное начало великой саги</description>
+            <cast>
+        <person>
+            <name>Лиам Нисон</name>
+            <role>Квай-Гон Джинн</role>
+            <photo>neeson.jpg</photo>
+        </person>
+        <person>
+            <name>Юэн Макгрегор</name>
+            <role>Оби-Ван Кеноби</role>
+            <photo>mcgregor.jpg</photo>
+        </person>
+        <person>
+            <name>Натали Портман</name>
+            <role>Королева Амидала</role>
+            <photo>portman.jpg</photo>
+        </person>
+        <person>
+            <name>Джейк Ллойд</name>
+            <role>Энакин Скайуокер</role>
+            <photo>lloyd.jpg</photo>
+        </person>
+        <person>
+            <name>Иен Макдермид</name>
+            <role>Палпатин</role>
+            <photo>mcdiarmid.jpg</photo>
+        </person>
+            </cast>
+        </movie>
+
+        <movie>
+            <age>6+</age>
+            <rating>4.3</rating>
+            <title>Белоснежка</title>
+            <meta>Фэнтези, мелодрама, 109 мин</meta>
+            <poster>snowwhite.jpg</poster>
+            <trailer>MnGQ5YibxB0</trailer>
+            <price>12.00</price>
+            <sessions>
+                <date value="28 Апр">
+                    <time seats="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">10:30</time>
+                </date>
+            </sessions>
+            <description>Юная принцесса Белоснежка потеряла родителей и осталась на попечении у Злой королевы, которая держит её запертой в замке. Однажды волшебное зеркало говорит королеве, что принцесса стала прекраснее неё. Злая мачеха приказывает охотнику отвести Белоснежку в лес и убить, однако он не может заставить себя выполнить приказ. Белоснежка сбегает и прячется в домике семи гномов.</description>
+            <cast>
+                <person>
+            <name>Рэйчел Зеглер</name>
+            <role>Белоснежка</role>
+            <photo>zegler.jpg</photo>
+        </person>
+        <person>
+            <name>Галь Гадот</name>
+            <role>Злая королева</role>
+            <photo>gadot.jpg</photo>
+        </person>
+        <person>
+            <name>Эндрю Бернап</name>
+            <role>Джонатан</role>
+            <photo>burnap.jpg</photo>
+        </person>
+        <person>
+            <name>Ансу Кабиа</name>
+            <role>Охотник</role>
+            <photo>kabia.jpg</photo>
+        </person>
+        </cast>
+        </movie>
+
+        <movie>
+            <age>18+</age>
+            <rating>7.5</rating>
+            <title>Заклятие</title>
+            <meta>Ужасы, 112 мин</meta>
+            <poster>conjuring.jpg</poster>
+            <trailer>CkqSvj4rK8s</trailer>
+            <price>16.00</price>
+            <sessions>
+                <date value="28 Апр">
+                    <time seats="1,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">22:00</time>
+                </date>
+            </sessions>
+            <description>Эд и Лоррейн Уоррены — детективы, которые расследуют паранормальные дела. Однажды к ним обращается семья, страдающая от злого духа. Уоррены, вынужденные сражаться с могущественной демонической сущностью, сталкиваются с самым пугающим случаем в своей жизни.</description>
+            <cast>
+                <person>
+            <name>Вера Фармига</name>
+            <role>Лоррейн Уоррен</role>
+            <photo>farmiga.jpg</photo>
+        </person>
+        <person>
+            <name>Патрик Уилсон</name>
+            <role>Эд Уоррен</role>
+            <photo>wilson.jpg</photo>
+        </person>
+        <person>
+            <name>Лили Тейлор</name>
+            <role>Кэролин Перрон</role>
+            <photo>taylor.jpg</photo>
+        </person>
+        <person>
+            <name>Рон Ливингстон</name>
+            <role>Роджер Перрон</role>
+            <photo>livingston.jpg</photo>
+        </person>
+        </cast>
+        </movie>
+
+        <movie>
+            <age>16+</age>
+            <rating>8.5</rating>
+            <title>Остров проклятых</title>
+            <meta>Триллер, 138 мин</meta>
+            <poster>shutter-island.jpg</poster>
+            <trailer>_l7R9Rz5URw</trailer>
+            <price>17.00</price>
+            <sessions>
+                <date value="29 Апр">
+                    <time seats="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">18:00</time>
+                </date>
+            </sessions>
+            <description>Два американских судебных пристава отправляются на один из островов в штате Массачусетс, чтобы расследовать исчезновение пациентки клиники для умалишенных преступников. При проведении расследования им придется столкнуться с паутиной лжи, обрушившимся ураганом и смертельным бунтом обитателей клиники.</description>
+            <cast>
+            <person>
+            <name>Леонардо Ди Каприо</name>
+            <role>Тедди Дэниелс</role>
+            <photo>dicaprio.jpg</photo>
+        </person>
+        <person>
+            <name>Марк Руффало</name>
+            <role>Чак Оул</role>
+            <photo>ruffalo.jpg</photo>
+        </person>
+        <person>
+            <name>Бен Кингсли</name>
+            <role>Доктор Джон Коули</role>
+            <photo>kingsley.jpg</photo>
+        </person>
+        <person>
+            <name>Мишель Уильямс</name>
+            <role>Долорес</role>
+            <photo>williams.jpg</photo>
+        </person>
+        <person>
+            <name>Макс фон Сюдов</name>
+            <role>Доктор Иеремия Неринг</role>
+            <photo>syndow.jpg</photo>
+        </person>
+            </cast>
+        </movie>
+
+        <movie>
+            <age>18+</age>
+            <rating>6.7</rating>
+            <title>Хижина в лесу</title>
+            <meta>Ужасы, комедия, 95 мин</meta>
+            <poster>house_in_forest.jpg</poster>
+            <trailer>PFPN5yoGSu8</trailer>
+            <price>15.00</price>
+            <sessions>
+                <date value="28 Апр">
+                    <time seats="0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">23:50</time>
+                </date>
+            </sessions>
+            <description>Компания из пяти студентов отправляется на выходные в лесной домик, который недавно купил брат одного из них, — подальше от учёбы, где можно оторваться по-настоящему. Слегка поднабравшись, ребята обнаруживают дверь в подвал, где находят странную книгу и читают вслух заклинание, которое выпускает на волю полчища зомби. И это только начало невообразимых ужасов, с которыми придётся столкнуться незадачливым студентам.</description>
+            <cast>
+            <person>
+            <name>Кристен Коннолли</name>
+            <role>Дана</role>
+            <photo>connolly.jpg</photo>
+        </person>
+        <person>
+            <name>Крис Хемсворт</name>
+            <role>Курт</role>
+            <photo>hemsworth.jpg</photo>
+        </person>
+        <person>
+            <name>Анна Хатчисон</name>
+            <role>Джулс</role>
+            <photo>hutchison.jpg</photo>
+        </person>
+        <person>
+            <name>Фрэн Кранц</name>
+            <role>Марти</role>
+            <photo>kranz.jpg</photo>
+        </person>
+        <person>
+            <name>Джесси Уильямс</name>
+            <role>Холден</role>
+            <photo>williams_j.jpg</photo>
+        </person>
+        </cast>
+        </movie>
+
+        <movie>
+            <age>16+</age>
+            <rating>8.8</rating>
+            <title>1+1 (Неприкасаемые)</title>
+            <meta>Комедия, 112 мин</meta>
+            <poster>intouchables.jpg</poster>
+            <trailer>oK5hMNxqsFA</trailer>
+            <price>15.00</price>
+            <sessions>
+                <date value="28 Апр">
+                    <time seats="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">14:00</time>
+                </date>
+            </sessions>
+            <description>Пострадав в результате несчастного случая, богатый аристократ Филипп нанимает в помощники человека, который менее всего подходит для этой работы, – молодого жителя предместья Дрисса, только что освободившегося из тюрьмы. Несмотря на то, что Филипп прикован к инвалидному креслу, Дриссу удается привнести в размеренную жизнь аристократа дух приключений.</description>
+            <cast>
+                <person>
+            <name>Франсуа Клюзе</name>
+            <role>Филипп</role>
+            <photo>cluzet.jpg</photo>
+        </person>
+        <person>
+            <name>Омар Си</name>
+            <role>Дрисс</role>
+            <photo>omar_sy.jpg</photo>
+        </person>
+        <person>
+            <name>Анн Ле Ни</name>
+            <role>Ивонна</role>
+            <photo>le_ny.jpg</photo>
+        </person>
+        <person>
+            <name>Одри Флеро</name>
+            <role>Магали</role>
+            <photo>fleurot.jpg</photo>
+        </person>
+            </cast>
+        </movie>
+    </movies>
+</data>

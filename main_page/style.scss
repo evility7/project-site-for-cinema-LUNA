@@ -1,0 +1,460 @@
+@import "../components/common";
+
+.header .burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  gap: 6px;
+
+  span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: $color-white;
+    transition: 0.3s ease;
+    transform-origin: center;
+  }
+
+  &.active {
+    span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}
+
+.nav {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+  &-link {
+    text-decoration: none;
+    color: $color-muted;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+// Гланый баннер
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-color: $color-bg;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, $color-bg 15%, transparent 70%),
+      linear-gradient(0deg, $color-bg 5%, transparent 50%);
+    z-index: 1;
+  }
+
+  &-overlay {
+    position: relative;
+    z-index: 10;
+    max-width: 750px;
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-tags {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+
+    .hero & span {
+      background: rgb(255 255 255 / 8%);
+      color: $color-white;
+      padding: 6px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgb(255 255 255 / 5%);
+
+      &:last-child {
+        color: #fbbf24;
+        font-weight: 700;
+        background: rgb(251 191 36 / 10%);
+        border: 1px solid rgb(251 191 36 / 20%);
+      }
+    }
+  }
+
+  &-title {
+    font-size: clamp(38px, 6vw, 72px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 800;
+    color: $color-white;
+  }
+
+  &-desc {
+    color: $color-muted;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+
+  &-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  &-duration {
+    font-size: 14px;
+    color: $color-muted;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.8;
+  }
+}
+
+.movie-btn-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+// Окно трейлера (проигрыватель)
+.trailer-modal {
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 90%);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+
+  &.active {
+    display: flex;
+  }
+
+  &-content {
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      border: none;
+    }
+  }
+}
+
+// Карточки фильмов
+.genres {
+  display: flex;
+  gap: 12px;
+  margin: 30px 0;
+  overflow-x: auto;
+  padding-bottom: 10px;
+
+  .genre {
+    background: $color-card;
+    border: none;
+    color: $color-muted;
+    padding: 14px 32px;
+    border-radius: 14px;
+    font-size: 1.05rem;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &.active,
+    &:hover {
+      background: $color-accent;
+      color: white;
+      box-shadow: 0 6px 15px rgb(139 92 246 / 30%);
+    }
+  }
+}
+
+.movies {
+  padding: 80px 0;
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.movie {
+  flex: 0 1 calc(25% - 23px);
+  background: $color-card;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  &-poster {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+  }
+
+  &-info {
+    padding: 24px;
+    flex-grow: 1;
+  }
+
+  &-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    min-height: 50px;
+  }
+
+  &-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: $color-muted;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  &-dot {
+    width: 4px;
+    height: 4px;
+    background: $color-muted;
+    border-radius: 50%;
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &-rating {
+    color: #fbbf24;
+    font-weight: bold;
+    margin-left: 15px;
+    padding-right: 10px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+}
+
+// Преимущества
+.features {
+  padding: 100px 0;
+  text-align: center;
+
+  &-subtitle {
+    color: $color-muted;
+    margin: 20px 0 50px;
+  }
+
+  &-grid {
+    display: flex;
+    gap: 20px;
+  }
+
+  .feature {
+    flex: 1;
+    background: $color-card;
+    padding: 40px 20px;
+    border-radius: 24px;
+
+    h3 {
+      margin: 20px 0 10px;
+    }
+
+    p {
+      color: $color-muted;
+      font-size: 14px;
+    }
+
+    &-icon svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+// Адаптация
+@media (width <= 1024px) {
+  .movie {
+    flex: 0 1 calc(33.333% - 20px);
+  }
+}
+
+@media (width <= 768px) {
+  .header .burger {
+    display: flex;
+    order: 3;
+  }
+
+  .nav {
+    display: none;
+
+    &-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 200px;
+      background-color: #0b0b12;
+      z-index: 999;
+      gap: 30px;
+    }
+  }
+
+  .hero-overlay {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .features {
+    padding: 60px 0;
+
+    &-grid {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .feature {
+      width: 100%;
+      padding: 30px 20px;
+    }
+  }
+}
+
+@media (width >= 481px) and (width <= 768px) {
+  .movies-list {
+    gap: 20px;
+  }
+
+  .movie {
+    flex: 0 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+
+@media (width <= 480px) {
+  .hero {
+    &-title {
+      font-size: 28px;
+      overflow-wrap: break-word;
+      text-align: center;
+    }
+
+    &-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0 20px;
+      gap: 12px;
+
+      .hero-btn-link,
+      #play-trailer {
+        width: 100%;
+        max-width: 320px;
+        margin: 0;
+      }
+    }
+  }
+
+  .movie {
+    flex: 0 1 100%;
+    max-width: 100%;
+
+    &-bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+
+      .movie-btn-link {
+        flex-grow: 1;
+
+        .btn {
+          width: 100%;
+          padding: 12px 20px;
+          min-height: 48px;
+          font-size: 1rem;
+        }
+      }
+
+      .movie-rating {
+        margin: 0;
+        padding-right: 5px;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

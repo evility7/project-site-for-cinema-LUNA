@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LUNA — Фильмы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <svg width="24px" height="24px" viewBox="0 0 24 24" role="img">
+          <title>Логотип кинотеатра Luna</title>
+          <path
+            d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <span>LUNA</span>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-link" href="#">Фильмы</a>
+        <a class="nav-link" href="#about">О кинотеатре</a>
+        <a class="nav-link" href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <a href="../login/login.html" class="btn-login">Войти</a>
+    </header>
+    <main>
+      <section class="hero" id="hero-banner">
+        <div class="hero-overlay">
+          <div class="hero-tags" id="hero-tags"></div>
+
+          <h1 class="hero-title" id="hero-title">Загрузка...</h1>
+
+          <p class="hero-desc" id="hero-desc"></p>
+
+          <div class="hero-actions">
+            <a
+              href="../tickets/tickets.html?movie=Горничная"
+              class="hero-btn-link btn-primary"
+              id="hero-purchase-link"
+            >
+              Купить билеты
+            </a>
+            <button type="button" class="btn-outline" id="play-trailer">
+              Трейлер
+            </button>
+          </div>
+
+          <p class="hero-duration" id="hero-duration"></p>
+        </div>
+      </section>
+      <div id="trailer-modal" class="trailer-modal">
+        <div class="trailer-modal-content">
+          <span class="close-modal">&times;</span>
+          <div class="video-container">
+            <iframe
+              title="Трейлер фильма"
+              id="trailer-iframe"
+              src="about:blank"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <section class="movies">
+        <h2>Сейчас в кино</h2>
+
+        <div class="genres">
+          <button type="button" class="genre active" data-genre="all">
+            Все
+          </button>
+          <button type="button" class="genre" data-genre="мелодрама">
+            Мелодрама
+          </button>
+          <button type="button" class="genre" data-genre="драма">Драма</button>
+          <button type="button" class="genre" data-genre="комедия">
+            Комедия
+          </button>
+          <button type="button" class="genre" data-genre="фэнтези">
+            Фэнтези
+          </button>
+          <button type="button" class="genre" data-genre="ужасы">Ужасы</button>
+          <button type="button" class="genre" data-genre="триллер">
+            Триллер
+          </button>
+        </div>
+
+        <div id="movies-list" class="movies-list"></div>
+      </section>
+      <section class="features" id="about">
+        <h2>Почему выбирают нас</h2>
+
+        <p class="features-subtitle">
+          Мы создали пространство, где каждый просмотр становится незабываемым
+          событием
+        </p>
+
+        <div class="features-grid">
+          <article class="feature">
+            <div class="feature-icon">
+              <svg
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                role="img"
+              >
+                <title>Диван</title>
+                <path
+                  d="M8 18H5.55556C3.59188 18 2 16.4081 2 14.4444V12C2 10.8954 2.89543 10 4 10C5.10457 10 6 10.8954 6 12V13.2C6 13.6418 6.35817 14 6.8 14H17.2C17.6418 14 18 13.6418 18 13.2V12C18 10.8954 18.8954 10 20 10C21.1046 10 22 10.8954 22 12V14.4444C22 16.4081 20.4081 18 18.4444 18H12"
+                  stroke="#a855ff"
+                  stroke-width="1.5"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M15 5C15.9293 5 16.394 5 16.7804 5.07686C18.3671 5.39249 19.6075 6.63288 19.9231 8.21964C20 8.60603 20 9.07069 20 10M4 10C4 9.07069 4 8.60603 4.07686 8.21964C4.39249 6.63288 5.63288 5.39249 7.21964 5.07686C7.60603 5 8.07069 5 9 5H11"
+                  stroke="#a855ff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M20 19V18M4 19V18"
+                  stroke="#a855ff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3>Комфортные залы</h3>
+            <p>
+              Просторные кресла‑реклайнеры с увеличенным пространством для ног
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" role="img">
+                <title>Звук</title>
+                <path
+                  d="M3 10v4h3l5 4V6l-5 4H3Z"
+                  stroke="#a855ff"
+                  stroke-width="1.5"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M15 9s2 .5 2 3-2 3-2 3"
+                  stroke="#a855ff"
+                  stroke-width="1.5"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M17 7s3 .8 3 5-3 5-3 5"
+                  stroke="#a855ff"
+                  stroke-width="1.5"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3>IMAX & Dolby Atmos</h3>
+            <p>
+              Передовые технологии звука и изображения для полного погружения
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" role="img">
+                <title>Еда</title>
+                <g transform="scale(0.045) translate(0, 0)">
+                  <path
+                    d="M393.722,438.868L371.37,271.219h0.622c6.564,0,11.885-5.321,11.885-11.885V17.668
+            c0-4.176-2.183-8.03-5.751-10.18c-3.569-2.152-7.998-2.279-11.679-0.335c-46.345,24.454-75.357,72.536-75.357,124.952v101.898
+            c0,20.551,16.665,37.215,37.218,37.215h2.818l-22.352,167.649c-1.625,12.235,2.103,24.599,10.228,33.886
+            c8.142,9.289,19.899,14.625,32.246,14.625c12.346,0,24.104-5.336,32.246-14.625C391.619,463.467,395.347,451.104,393.722,438.868z"
+                    stroke="#a855ff"
+                    stroke-width="20"
+                    fill="none"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M207.482,0c-9.017,0-16.314,7.297-16.314,16.313v91.128h-16.314V16.313C174.854,7.297,167.557,0,158.54,0
+            c-9.017,0-16.313,7.297-16.313,16.313v91.128h-16.314V16.313C125.912,7.297,118.615,0,109.599,0
+            c-9.018,0-16.314,7.297-16.314,16.313v91.128v14.913v41.199c0,24.2,19.611,43.811,43.811,43.811h3.616L115,438.74
+            c-1.37,12.378,2.596,24.758,10.896,34.047c8.317,9.287,20.186,14.592,32.645,14.592c12.459,0,24.327-5.305,32.645-14.592
+            c8.301-9.289,12.267-21.669,10.896-34.047l-25.713-231.375h3.617c24.199,0,43.811-19.611,43.811-43.811v-41.199v-14.913V16.313
+            C223.796,7.297,216.499,0,207.482,0z"
+                    stroke="#a855ff"
+                    stroke-width="20"
+                    fill="none"
+                    stroke-linecap="round"
+                  />
+                </g>
+              </svg>
+            </div>
+            <h3>Авторское меню</h3>
+            <p>
+              Широкий выбор закусок, напитков и всегда свежий крафтовый попкорн
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" role="img">
+                <title>Wi-Fi</title>
+                <path
+                  d="M2 8c3-3 7-4 10-4s7 1 10 4"
+                  stroke="#a855ff"
+                  stroke-width="1.5"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M5 12c2-2 4-3 7-3s5 1 7 3"
+                  stroke="#a855ff"
+                  stroke-width="1.5"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <circle cx="12" cy="17" r="2" fill="#a855ff" />
+              </svg>
+            </div>
+            <h3>Бесплатный Wi‑Fi</h3>
+            <p>Высокоскоростной интернет на всей территории кинотеатра</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <div id="footer-place"></div>
+    <script src="components/common.js"></script>
+    <script src="main_page/script.js"></script>
+  </body>
+</html>
