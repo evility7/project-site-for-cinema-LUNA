@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Кинотеатр LUNA - О фильме</title>
+    <link rel="stylesheet" href="../css/movie.css" />
+  </head>
+  <body class="movie-page">
+    <header class="header">
+      <div class="logo">
+        <svg width="24px" height="24px" viewBox="0 0 24 24" role="img">
+          <title>Логотип кинотеатра Luna</title>
+          <path
+            d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <span>LUNA</span>
+      </div>
+
+      <div class="header-actions">
+        <a href="../login/login.html" class="btn-login">Войти</a>
+        <a href="../index.html" class="back-link">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            role="img"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <title>Стрелка назад</title>
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Назад
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="movie-hero" id="movie-hero">
+        <div class="container">
+          <div class="movie-info">
+            <div id="tags" class="movie-tags"></div>
+            <h1 class="movie-title" id="title">Загрузка...</h1>
+            <div class="movie-rating">
+              <span class="star">★</span>
+              <span id="rating-val">0.0</span><span class="muted"> / 10</span>
+            </div>
+            <p class="movie-desc" id="description"></p>
+            <div class="movie-actions">
+              <a
+                href="../tickets/tickets.html"
+                class="movie-btn-link btn-primary"
+                id="buy-tickets-link"
+              >
+                Купить билеты
+              </a>
+              <button type="button" id="play-trailer" class="btn-outline">
+                Трейлер
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cast-section">
+        <div class="container">
+          <div class="cast-container">
+            <h2 class="cast-title">Актеры и съемочная группа</h2>
+            <div class="cast-grid" id="cast-grid"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="footer-place"></div>
+    <script src="../components/common.js"></script>
+
+    <div id="trailer-modal" class="trailer-modal">
+      <div class="trailer-modal-content">
+        <button type="button" class="close-modal">&times;</button>
+        <div class="video-container">
+          <iframe
+            title="Видео трейлер фильма"
+            id="trailer-iframe"
+            allowfullscreen
+            allow="autoplay"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <script src="movie.js"></script>
+  </body>
+</html>

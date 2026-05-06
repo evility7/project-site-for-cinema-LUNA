@@ -1,0 +1,258 @@
+@import "../components/common";
+
+// О фильме
+.movie-hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-top: 100px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to right, $color-bg 30%, transparent 100%),
+      linear-gradient(to top, $color-bg 5%, transparent 50%);
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  &-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+  }
+}
+
+.movie-info {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.movie-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+
+  .movie-tag {
+    background: rgb(45 45 58 / 60%);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgb(255 255 255 / 5%);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.movie-title {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.movie-rating {
+  margin-bottom: 25px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .star {
+    color: #fbbf24;
+    margin-right: 8px;
+  }
+
+  .muted {
+    color: $color-muted;
+    margin-left: 5px;
+  }
+}
+
+.movie-desc {
+  color: $color-muted;
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.movie-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+// Блок актеры и съемочная группа
+.cast-section {
+  padding: 60px 0;
+
+  .cast-container {
+    background: #1c1c27;
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 50px;
+  }
+
+  .cast-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+
+  .cast-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+  }
+}
+
+.actor-card {
+  text-align: center;
+  width: 100%;
+
+  img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px;
+    border: 2px solid rgb(255 255 255 / 5%);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .actor-name {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 5px;
+    line-height: 1.2;
+  }
+
+  .actor-role {
+    display: block;
+    color: #94a3b8;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    opacity: 0.8;
+  }
+}
+
+// Трейлер
+.trailer-modal {
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 90%);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+
+  &.active {
+    display: flex;
+  }
+
+  &-content {
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      border: none;
+    }
+  }
+}
+
+// Адаптация
+@media (width <= 992px) {
+  .cast-section .cast-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width <= 768px) {
+  .movie-hero {
+    align-items: center;
+    padding-top: 80px;
+  }
+
+  .movie-info {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (width <= 480px) {
+  .movie-hero .container {
+    padding: 0 20px;
+  }
+
+  .movie-title {
+    font-size: 28px;
+  }
+
+  .movie-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .actor-card img {
+    width: 100px;
+    height: 100px;
+  }
+}
