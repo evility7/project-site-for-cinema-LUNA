@@ -1,0 +1,374 @@
+@import "../components/common";
+
+$transition: all 0.2s ease;
+$border: 1px solid rgb(255 255 255 / 5%);
+
+// Банковская карта
+.card {
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 25px;
+  border: $border;
+}
+
+.movie-card-bg {
+  background-color: #1f1924;
+}
+
+.selection-card-bg {
+  background-color: #231d28;
+}
+
+.summary-card-bg {
+  background-color: #2e2832;
+}
+
+.payment-card-bg {
+  background-color: #1f1924;
+}
+
+// Основной контент
+.purchase-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 30px;
+  align-items: start;
+  padding-top: 100px;
+  padding-bottom: 80px;
+
+  @media (width <= 992px) {
+    grid-template-columns: 1fr;
+    padding-top: 140px;
+  }
+}
+
+.movie-main-info {
+  border-radius: 12px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  h1 {
+    margin-left: 15px;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: -1px;
+  }
+
+  .age-badge {
+    padding: 4px 12px;
+    background: rgb(255 255 255 / 10%);
+    border: 2px solid $color-ticket;
+    border-radius: 8px;
+    font-weight: 600;
+    color: $color-ticket;
+    margin-right: 10px;
+  }
+}
+
+// Выбор мест
+.input-group {
+  margin-bottom: 25px;
+
+  label {
+    display: block;
+    font-size: 11px;
+    color: $color-muted;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  .chip {
+    padding: 12px 20px;
+    background: rgb(255 255 255 / 5%);
+    border: 1px solid rgb(255 255 255 / 10%);
+    border-radius: 12px;
+    color: $color-white;
+    cursor: pointer;
+    transition: $transition;
+    font-size: 14px;
+    font-weight: 500;
+
+    &.active {
+      background: $color-ticket;
+      color: #2c0051;
+      border-color: $color-ticket;
+      font-weight: 700;
+    }
+  }
+}
+
+.hall-scheme {
+  background: rgb(0 0 0 / 20%);
+  padding: 40px 20px;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 10px;
+
+  .screen-line {
+    width: 70%;
+    height: 2px;
+    background: $color-ticket;
+    margin: 0 auto 40px;
+    box-shadow: 0 0 15px $color-ticket;
+  }
+
+  .seats-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    .seat {
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+      background: $color-busy;
+      cursor: pointer;
+      transition: background 0.1s ease;
+
+      &.selected {
+        background: $color-ticket;
+        box-shadow: 0 0 12px rgb(221 184 255 / 60%);
+      }
+
+      &.busy {
+        opacity: 0.1;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+// Цена и контейнер
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgb(255 255 255 / 5%);
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $color-muted;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+
+  .seat-icon {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+
+    &.free {
+      background: $color-busy;
+      border: 1px solid rgb(255 255 255 / 10%);
+    }
+
+    &.selected {
+      background: $color-ticket;
+    }
+
+    &.busy {
+      background: $color-busy;
+      opacity: 0.2;
+    }
+  }
+}
+
+.price-display {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: $border;
+
+  .price-label {
+    font-size: 13px;
+    color: $color-muted;
+    font-weight: 500;
+
+    &#price-per-ticket {
+      color: $color-white;
+      font-weight: 700;
+    }
+  }
+}
+
+// Итоговая сумма и оплата
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: $color-muted;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  border-top: $border;
+  padding-top: 15px;
+  font-weight: 800;
+  font-size: 18px;
+
+  #total-price {
+    color: $color-ticket;
+  }
+}
+
+#payment-form {
+  margin-top: 20px;
+
+  .field {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 11px;
+      color: $color-muted;
+      letter-spacing: 1px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      background: rgb(0 0 0 / 30%);
+      border: $border;
+      border-radius: 10px;
+      color: white;
+      outline: none;
+
+      &:focus {
+        border-color: $color-ticket;
+      }
+    }
+  }
+
+  .field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+.pay-button {
+  width: 100%;
+  padding: 16px;
+  background: $color-ticket;
+  color: #2c0051;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.secure-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  font-size: 12px;
+  color: $color-muted;
+}
+
+.icons {
+  margin-top: 10px;
+}
+
+// Адаптация
+@media (width <= 768px) {
+  .purchase-grid {
+    grid-template-columns: 1fr;
+    padding-top: 80px;
+    gap: 20px;
+  }
+
+  .movie-main-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+
+    h1 {
+      margin-left: 0;
+      font-size: 28px;
+    }
+  }
+
+  .hall-scheme {
+    padding: 30px 10px;
+    overflow-x: auto;
+
+    .seats-grid {
+      grid-template-columns: repeat(10, 25px);
+      gap: 5px;
+
+      .seat {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    .screen-line {
+      width: 90%;
+    }
+  }
+
+  .legend {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .pay-button {
+    padding: 18px;
+    font-size: 16px;
+  }
+}
+
+@media (width <= 480px) {
+  .hall-scheme .seats-grid {
+    grid-template-columns: repeat(10, 20px);
+    gap: 4px;
+
+    .seat {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .chips .chip {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .price-display {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
