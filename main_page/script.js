@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				const heroBanner = document.getElementById("hero-banner");
 				if (heroBanner)
-					heroBanner.style.backgroundImage = `url('../img/${bImg}')`;
+					heroBanner.style.backgroundImage = `url('img/${bImg}')`;
 
 				document.getElementById("hero-title").textContent = bTitle;
 				document.getElementById("hero-desc").textContent =
@@ -125,14 +125,14 @@ document.addEventListener("DOMContentLoaded", () => {
 			const card = document.createElement("article");
 			card.className = "movie";
 			card.innerHTML = `
-                <img src='../img/${movie.poster}' class='movie-poster'>
+                <img src='img/${movie.poster}' class='movie-poster'>
                 <div class='movie-info'>
                     <h3 class='movie-title'>${movie.title}</h3>
                     <div class='movie-meta'>
                         <span>${movie.age}</span><span class='movie-dot'></span><span>${movie.meta}</span>
                     </div>
                     <div class='movie-bottom'>
-                        <a href='../tickets/tickets.html?movie=${encodeURIComponent(movie.title)}' class='movie-btn-link'>
+                        <a href='tickets/tickets.html?movie=${encodeURIComponent(movie.title)}' class='movie-btn-link'>
                             <button class='btn btn-primary'>Билеты</button>
                         </a>
                         <div class='movie-rating'>${movie.rating}</div>
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			// Клик по карточке (с проверкой, чтобы не срабатывало при нажатии на кнопку билетов)
 			card.onclick = (event) => {
 				if (!event.target.closest(".movie-btn-link")) {
-					window.location.href = `../movie/movie.html?title=${encodeURIComponent(movie.title)}`;
+					window.location.href = `movie/movie.html?title=${encodeURIComponent(movie.title)}`;
 				}
 			};
 
