@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 					movieName,
 			);
 
-			// ИСПРАВЛЕНО: Вместо тернарного оператора используем if/else
 			if (movie) {
 				init(movie);
 			} else {

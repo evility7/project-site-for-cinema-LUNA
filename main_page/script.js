@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				document.getElementById("hero-duration").textContent =
 					banner.querySelector("duration").textContent;
 				document.getElementById("hero-purchase-link").href =
-					`../tickets/tickets.html?movie=${encodeURIComponent(bTitle)}`;
+					`tickets/tickets.html?movie=${encodeURIComponent(bTitle)}`;
 
 				document.getElementById("hero-tags").innerHTML =
 					"<span>" +
