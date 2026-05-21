@@ -369,6 +369,8 @@
       background-color: #0b0b12;
       z-index: 999;
       gap: 30px;
+      padding-top: 0;
+      height: -webkit-fill-available;
     }
   }
 
