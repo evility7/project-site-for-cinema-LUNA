@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			const xml = parser.parseFromString(xmlData, "text/xml");
 			const allMovies = xml.getElementsByTagName("movie");
 
-			// 3. Ищем нужный фильм обычным циклом (самый понятный способ)
+			// 3. Ищем нужный фильм обычным циклом
 			let foundMovie = null;
 			for (let i = 0; i < allMovies.length; i++) {
 				const currentTitle =
